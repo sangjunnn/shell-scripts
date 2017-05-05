@@ -34,12 +34,6 @@ read -p "Are you using Ubuntu 14.04?[y/n]" yn
         
         *)
     esac
-#read v
-
-#if ((v == 14))
-#then 
-#    sudo apt-get install libgflags-dev libgoogle-glog-dev liblmdb-dev
-#fi
 
 echo "Installing Git.."
 
