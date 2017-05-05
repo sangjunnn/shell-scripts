@@ -24,6 +24,7 @@ read -p "Would you like to download Anaconda2?[Y/n]" yn
         *)
     esac 
 
+#Additional dependencies for Ubuntu 14.04
 read -p "Are you using Ubuntu 14.04?[y/n]" yn
 
     case $yn in
