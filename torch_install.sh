@@ -2,7 +2,7 @@
 
 echo "Torch install.."
 
-git clone "https://github.com/torch/distro.git ~/torch --recursive" "/home/sj/"
+git clone "https://github.com/torch/distro.git ~/torch --recursive" "/home/sj/torch"
 
 cd ~/torch
 
