@@ -42,7 +42,7 @@ sudo apt-get install git
 
 echo "Downloading Caffe source from github.."
 
-git clone https://github.com/BVLC/caffe.git
+git clone "https://github.com/BVLC/caffe.git" "/home/sj/"
 
 cd caffe
 
