@@ -1,0 +1,32 @@
+################ Docker install ##########################
+
+sudo apt-get update
+
+sudo apt-get install --no-install-recommends \
+apt-transport-https \
+curl \
+software-properties-common
+
+sudo apt-get install -y --no-install-recommends \
+linux-image-extra-$(uname -r) \
+linux-image-extra-virtual
+
+curl -fsSL 'https://sks-keyservers.net/pks/lookup?op=get&search=0xee6d536cf7dc86e2d7d56f59a178ac6c6238f52e' | sudo apt-key add -
+
+ sudo add-apt-repository \
+   "deb https://packages.docker.com/1.13/apt/repo/ \
+   ubuntu-$(lsb_release -cs) \
+   main"
+
+sudo apt=get update
+
+sudo apt-get -y install docker-engine
+
+################ NVIDIA-Docker install ##########################
+
+wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.1/nvidia-docker_1.0.1-1_amd64.deb
+
+sudo dpkg -i /tmp/nvidia-docker*.deb && rm /tmp/nvidia-docker*.deb
+
+#nvidia docker test
+nvidia-docker run --rm nvidia/cuda nvidia-smi
