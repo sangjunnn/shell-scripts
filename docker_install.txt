@@ -18,7 +18,7 @@ curl -fsSL 'https://sks-keyservers.net/pks/lookup?op=get&search=0xee6d536cf7dc86
    ubuntu-$(lsb_release -cs) \
    main"
 
-sudo apt=get update
+sudo apt-get update
 
 sudo apt-get -y install docker-engine
 
