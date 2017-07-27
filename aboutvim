@@ -1,0 +1,52 @@
+#install vim
+
+sudo apt-get update
+
+sudo apt-get install vim
+
+#vim settings
+
+vi ~/.vimrc
+
+set number            # line numbering
+
+set ai                    # auto indent
+
+set si                    # smart indent
+
+set cindent            # c style indent
+
+set shiftwidth=4      # shift = 4( >, >>, <, <<)
+
+set tabstop=4         # tab = 4
+
+set ignorecase      # no Capital searching
+
+set hlsearch         # highlight for searching
+
+set expandtab       # space instead of tab
+
+set background=dark  # black background
+
+set nocompatible   # accept arrows 
+
+set fileencodings=utf-8,euc-kr    #file encoding format
+
+set bs=indent,eol,start    # accept backspace 
+
+set history=1000    # command history 1000
+
+set ruler              # 상태표시줄에 커서의 위치 표시
+
+set nobackup      # 백업파일을 만들지 않음
+
+set title               # 제목을 표시
+
+set showmatch    # 매칭되는 괄호를 보여줌
+
+set nowrap         # 자동 줄바꿈 하지 않음
+
+set wmnu           # tab 자동완성시 가능한 목록을 보여줌
+
+
+syntax on        # 문법 하이라이트 킴"
