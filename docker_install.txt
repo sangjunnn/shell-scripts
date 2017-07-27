@@ -30,3 +30,7 @@ sudo dpkg -i /tmp/nvidia-docker*.deb && rm /tmp/nvidia-docker*.deb
 
 #nvidia docker test
 nvidia-docker run --rm nvidia/cuda nvidia-smi
+
+################ NVIDIA-Docker run ##########################
+
+nvidia-docker run -it -p 8888:8888 tensorflow/tensorflow:latest-devel-gpu
