@@ -22,6 +22,9 @@ sudo apt-get update
 
 sudo apt-get -y install docker-engine
 
+#give root permission to docker
+sudo usermod -aG docker <user name>
+
 ################ Docker uninstall ##########################
 
 sudo apt-get purge -y docker-engine
