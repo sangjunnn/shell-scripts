@@ -12,6 +12,9 @@ bash install-deps
 
 source ~/.bashrc
 
+# when 'luarocks intall something' is not working
+sudo ~/torch/install/bin/luarocks install loadcaffe
+
 luarocks install image
 
 luarocks install torch
