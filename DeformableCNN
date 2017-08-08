@@ -1,0 +1,62 @@
+# PIL image install
+
+pip install image
+
+# yaml install
+
+sudo apt-get install python-yaml
+
+# matplotlib install
+
+sudo apt-get install libpng-dev
+sudo apt-get install libfreetype6-dev
+sudo apt-get install libjpeg8-dev
+sudo pip install matplotlib
+
+# openblas install
+
+git clone git://github.com/xianyi/OpenBLAS
+cd OpenBLAS && make FC=gfortran
+
+sudo make PREFIX=/opt/OpenBLAS install
+sudo ldconfig
+
+cp /opt/OpenBlas/lib/libopenblas.a /usr/lib
+cp /opt/OpenBlas/lib/libopenblas.a /usr/local/lib
+
+cp /opt/OpenBlas/lib/libopenblas.so* /usr/lib
+cp /opt/OpenBlas/lib/libopenblas.so* /usr/local/lib
+
+# opencv install 
+
+git clone https://github.com/jayrambhia/Install-OpenCV.git
+
+cd Ubuntu
+chmod +x *
+./opencv_latest.sh
+
+# python packages
+
+pip install Cython
+pip install opencv-python==3.2.0.6
+pip install easydict==1.6
+
+# install Deformable CNN
+
+git clone https://github.com/msracver/Deformable-ConvNets.git
+cd Deformable-ConvNets
+sh./init.sh
+
+# install MXnet
+
+git clone --recursive https://github.com/dmlc/mxnet.git
+git checkout 62ecb60
+git submodule update
+
+cp -r $(DCN_ROOT)/rfcn/operator_cxx/* $(MXNET_ROOT)/src/operator/contrib/
+
+cd ${MXNET_ROOT}
+make -j $(nproc) USE_OPENCV=1 USE_BLAS=openblas USE_CUDA=1 USE_CUDA_PATH=/usr/local/cuda USE_CUDNN=1
+
+cd python
+sudo python setup.py install
