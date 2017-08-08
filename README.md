@@ -1,2 +1,2 @@
-# shell-scripts
-shell-scripts
+# infos for me
+shell-scripts and other installations
