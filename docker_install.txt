@@ -54,4 +54,7 @@ nvidia-docker run --rm nvidia/cuda nvidia-smi
 ################ NVIDIA-Docker run ##########################
 
 nvidia-docker run -it -p 8888:8888 tensorflow/tensorflow:latest-devel-gpu
-nvidia-docker run -it -p 8888:8888 gcr.io/tensorflow/tensorflow:latest-gpu #jupyter 
+nvidia-docker run -it -p 8888:8888 gcr.io/tensorflow/tensorflow:latest-gpu #jupyter
+nvidia-docker run -i -t --name ${name} /tensorflow/tensorflow:latest-gpu /bin/bash # bash container making
+nvidia-docker start ${name} # start 
+nvidia-docker attach ${name} # attach 
