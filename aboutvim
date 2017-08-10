@@ -38,11 +38,6 @@ set history=1000    # command history 1000
 
 set ruler              # 상태표시줄에 커서의 위치 표시
 
-################### vim commands ###################
-/${something} # search
-ctrl + f / b  # go forward / backward
-:wq           # save and quit
-
 set nobackup      # 백업파일을 만들지 않음
 
 set title               # 제목을 표시
@@ -55,3 +50,8 @@ set wmnu           # tab 자동완성시 가능한 목록을 보여줌
 
 
 syntax on        # 문법 하이라이트 킴"
+
+################### vim commands ###################
+/${something} # search
+ctrl + f / b  # go forward / backward
+:wq           # save and quit
