@@ -4,7 +4,7 @@ sudo apt-get update
 
 sudo apt-get install vim
 
-#vim settings
+################### vim settings ###################
 
 vi ~/.vimrc
 
@@ -37,6 +37,11 @@ set bs=indent,eol,start    # accept backspace
 set history=1000    # command history 1000
 
 set ruler              # 상태표시줄에 커서의 위치 표시
+
+################### vim commands ###################
+/${something} # search
+ctrl + f / b  # go forward / backward
+:wq           # save and quit
 
 set nobackup      # 백업파일을 만들지 않음
 
